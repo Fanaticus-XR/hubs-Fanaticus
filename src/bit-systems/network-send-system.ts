@@ -97,7 +97,9 @@ export function networkSendSystem(world: HubsWorld) {
       deletedEntities,
       true
     );
-    if (message) NAF.connection.broadcastDataGuaranteed("nn", message);
+    if (message) {
+      NAF.connection.broadcastDataGuaranteed("nn", message);
+    }
 
     deletedEntities.forEach(eid => {
       world.deletedNids.add(Networked.id[eid]);
