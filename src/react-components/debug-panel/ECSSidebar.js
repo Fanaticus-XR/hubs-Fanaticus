@@ -54,7 +54,7 @@ export function formatComponentProps(eid, component) {
     if (ArrayBuffer.isView(val)) {
       str += JSON.stringify(Array.from(val));
     } else if (isStr) {
-      let strVal = APP.getString(val);
+      const strVal = APP.getString(val);
       if (strVal === NAF.clientId) {
         str += `${val} *You* "${strVal}"`;
       } else {
