@@ -116,7 +116,7 @@ export function waypointSystem(
     const obj = world.eid2obj.get(eid)!;
     obj.visible = sceneIsFrozen;
     const isOccupied = hasComponent(world, NetworkedWaypoint, eid) && NetworkedWaypoint.occupied[eid];
-    if (obj.children.length) {
+    if (Waypoint.flags[eid] & WaypointFlags.canBeOccupied && obj.children.length) {
       ((obj.children[0] as Mesh).material as MeshStandardMaterial).color.setHex(isOccupied ? 0xff00aa : 0xffffff);
     }
   });
