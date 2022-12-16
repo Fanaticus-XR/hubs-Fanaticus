@@ -16,6 +16,7 @@ import {
 } from "../../../bit-components";
 import { anyEntityWith } from "../../../utils/bit-utils";
 
+const sensitivity = 0.1;
 const MOVE_CURSOR_JOB = "MOVE CURSOR";
 const MOVE_CAMERA_JOB = "MOVE CAMERA";
 const FIRST_PINCHER_JOB = "FIRST PINCHER";
@@ -35,7 +36,7 @@ function distance(x1, y1, x2, y2) {
   return Math.sqrt(dx * dx + dy * dy);
 }
 
-const getPlayerCamera = function() {
+const getPlayerCamera = function () {
   return AFRAME.scenes[0].systems["hubs-systems"].cameraSystem.viewingCamera;
 };
 
@@ -325,7 +326,7 @@ export class AppAwareTouchscreenDevice {
     const cameraMover =
       jobIsAssigned(MOVE_CAMERA_JOB, this.assignments) && findByJob(MOVE_CAMERA_JOB, this.assignments);
     if (cameraMover) {
-      cameraMover.delta[0] = 0;
+      cameraMover.delta[0] = 0; //sets the position back to 0 after moving camera, only does touch
       cameraMover.delta[1] = 0;
     }
 
@@ -370,7 +371,11 @@ export class AppAwareTouchscreenDevice {
 
     if (hasCameraJob) {
       const delta = findByJob(MOVE_CAMERA_JOB, this.assignments).delta;
-      frame.setVector2(path.touchCameraDelta, delta[0] / this.canvas.clientWidth, delta[1] / this.canvas.clientHeight);
+      frame.setVector2(
+        path.touchCameraDelta,
+        (delta[0] / this.canvas.clientWidth) * sensitivity,
+        (delta[1] / this.canvas.clientHeight) * sensitivity
+      ); // look sens
     }
 
     frame.setValueType(path.pinch.delta, this.pinch.delta);

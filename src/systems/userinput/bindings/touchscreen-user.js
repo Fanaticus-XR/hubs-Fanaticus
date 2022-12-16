@@ -25,8 +25,8 @@ export const touchscreenUserBindings = addSetsToBindings({
     },
     {
       src: { value: paths.device.touchscreen.pinch.delta },
-      dest: { value: forward },
-      xform: xforms.scale(0.25)
+      dest: { value: forward }, // pinch to move
+      xform: xforms.always(0)
     },
     {
       src: { value: paths.device.touchscreen.tap2 },
@@ -55,13 +55,13 @@ export const touchscreenUserBindings = addSetsToBindings({
     },
     {
       src: { value: touchCamDeltaX },
-      dest: { value: touchCamDeltaXScaled },
-      xform: xforms.scale(-Math.PI / 4)
+      dest: { value: touchCamDeltaXScaled }, // touch screen looking by dragging finger
+      xform: xforms.scale(-Math.PI)
     },
     {
       src: { value: touchCamDeltaY },
-      dest: { value: touchCamDeltaYScaled },
-      xform: xforms.scale(-Math.PI / 8)
+      dest: { value: touchCamDeltaYScaled }, // touch screen looking by dragging finger
+      xform: xforms.scale(-Math.PI / 2)
     },
     {
       src: { x: touchCamDeltaXScaled, y: touchCamDeltaYScaled },
@@ -75,17 +75,17 @@ export const touchscreenUserBindings = addSetsToBindings({
     },
     {
       src: { value: paths.device.gyro.averageDeltaX },
-      dest: { value: gyroCamDeltaXScaled },
+      dest: { value: gyroCamDeltaXScaled }, // camera gyro
       xform: xforms.scale(1.0)
     },
     {
       src: { value: paths.device.gyro.averageDeltaY },
-      dest: { value: gyroCamDeltaYScaled },
+      dest: { value: gyroCamDeltaYScaled }, // camera gyro
       xform: xforms.scale(1.0)
     },
     {
       src: { x: gyroCamDeltaYScaled, y: gyroCamDeltaXScaled },
-      dest: { value: gyroCamDelta },
+      dest: { value: gyroCamDelta }, // camera gyro
       xform: xforms.compose_vec2
     },
     {

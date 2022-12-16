@@ -1,6 +1,8 @@
 import { Pose } from "../pose";
 import { angleTo4Direction } from "../../../utils/dpad";
 
+const sensitivity = 1; // Adjust this value to control the touch sensitivity
+
 export const xforms = {
   noop: function () {},
   copy: function (frame, src, dest) {
@@ -32,8 +34,8 @@ export const xforms = {
   split_vec2: function (frame, src, dest) {
     const value = frame.get(src.value);
     if (value !== undefined) {
-      frame.setValueType(dest.x, value[0]);
-      frame.setValueType(dest.y, value[1]);
+      frame.setValueType(dest.x, value[0] * sensitivity);
+      frame.setValueType(dest.y, value[1] * sensitivity);
     }
   },
   compose_vec2: function (frame, src, dest) {
@@ -199,7 +201,7 @@ export const xforms = {
     }
     frame.setValueType(dest.value, false);
   },
-  touch_axis_scroll(scale = 1, snap_to) {
+  touch_axis_scroll(scale = 1.0, snap_to) {
     return function touch_axis_scroll(frame, src, dest, state = { value: 0, touching: false }) {
       if (snap_to === undefined || Math.abs(frame.get(src.value) - state.value) >= snap_to) {
         frame.setValueType(
