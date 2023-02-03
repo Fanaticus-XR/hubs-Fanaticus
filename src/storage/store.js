@@ -14,7 +14,7 @@ import { fetchRandomDefaultAvatarId, generateRandomName } from "../utils/identit
 import { NO_DEVICE_ID } from "../utils/media-devices-utils.js";
 import { getDefaultTheme } from "../utils/theme.js";
 
-const defaultMaterialQuality = (function() {
+const defaultMaterialQuality = (function () {
   const MATERIAL_QUALITY_OPTIONS = ["low", "medium", "high"];
 
   // HACK: AFRAME is not available on all pages, so we catch the ReferenceError.
@@ -144,7 +144,7 @@ export const SCHEMA = {
         disableStrafing: { type: "bool", default: false },
         disableTeleporter: { type: "bool", default: false },
         disableAutoPixelRatio: { type: "bool", default: false },
-        movementSpeedModifier: { type: "number", default: 1 },
+        movementSpeedModifier: { type: "number", default: 0.5 },
         disableEchoCancellation: { type: "bool", default: isFirefoxReality },
         disableNoiseSuppression: { type: "bool", default: isFirefoxReality },
         disableAutoGainControl: { type: "bool", default: isFirefoxReality },
