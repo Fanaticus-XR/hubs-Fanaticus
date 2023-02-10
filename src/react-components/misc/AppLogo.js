@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-
 import configs from "../../utils/configs";
 import { ReactComponent as HmcLogo } from "../icons/HmcLogo.svg";
 import { isHmc } from "../../utils/isHmc";
