@@ -30,7 +30,8 @@ function chooseRandom(arr) {
 }
 
 export function generateRandomName() {
-  return `${chooseRandom(names)}`;
+  // return `${chooseRandom(names)}`;
+  return ``;
 }
 
 export async function fetchRandomDefaultAvatarId() {
