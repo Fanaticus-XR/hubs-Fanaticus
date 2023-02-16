@@ -34,9 +34,9 @@ export function RoomEntryModal({
       <Column center className={styles.content}>
         {breakpoint !== "sm" && breakpoint !== "md" && (
           <div className={styles.logoContainer}>
+            {/* <img className={"control-scheme"} alt="Galaxy Hubs" src={controlScheme}> */}
             {/* <AppLogo /> */}
-            <img className={"control-scheme"} src={controlScheme} />;
-            {/* <img alt="Galaxy Hubs" src="../icons/controls.png"> */}
+            <img className={"control-scheme"} src={controlScheme} />
           </div>
         )}
         <div className={styles.roomName}>
