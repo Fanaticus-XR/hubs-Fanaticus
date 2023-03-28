@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { AppLogo } from "../misc/AppLogo";
 import classNames from "classnames";
 import { Modal } from "../modal/Modal";
 import { Button } from "../input/Button";
@@ -34,8 +35,8 @@ export function RoomEntryModal({
         {breakpoint !== "sm" && breakpoint !== "md" && (
           <div className={styles.logoContainer}>
             {/* <img className={"control-scheme"} alt="Galaxy Hubs" src={controlScheme}> */}
-            {/* <AppLogo /> */}
-            <img style="width: 200px" className={"control-scheme"} src={controlScheme} />
+             <AppLogo />
+            {/*<img style="width: 200px" className={"control-scheme"} src={controlScheme} />*/}
           </div>
         )}
         <div className={styles.roomName}>

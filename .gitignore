@@ -67,3 +67,7 @@ results/
 .ret.credentials
 src/assets/locales/en.json
 src/assets/locales/extracted-messages.json
+.idea/hubs-Fanaticus.iml
+.idea/inspectionProfiles/Project_Default.xml
+.idea/modules.xml
+.idea/vcs.xml
