@@ -11,7 +11,6 @@ import styles from "./RoomEntryModal.scss";
 import styleUtils from "../styles/style-utils.scss";
 import { useCssBreakpoints } from "react-use-css-breakpoints";
 import { Column } from "../layout/Column";
-import { AppLogo } from "../misc/AppLogo";
 import { FormattedMessage } from "react-intl";
 import controlScheme from "../../assets/images/controls.png";
 
@@ -36,7 +35,7 @@ export function RoomEntryModal({
           <div className={styles.logoContainer}>
             {/* <img className={"control-scheme"} alt="Galaxy Hubs" src={controlScheme}> */}
             {/* <AppLogo /> */}
-            <img className={"control-scheme"} src={controlScheme} />
+            <img style="width: 200px" className={"control-scheme"} src={controlScheme} />
           </div>
         )}
         <div className={styles.roomName}>
