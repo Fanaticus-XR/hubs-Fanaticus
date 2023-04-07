@@ -172,6 +172,7 @@ export function ChatSidebarContainer({ scene, canSpawnMessages, presences, occup
     e => {
       if (e.key === "Enter" && !e.shiftKey) {
         e.preventDefault();
+        console.log("HERE!")
         if (e.target.value.length <= MAX_MESSAGE_LENGTH) {
           sendMessage(e.target.value);
           setMessage("");
