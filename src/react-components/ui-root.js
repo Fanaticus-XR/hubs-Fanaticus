@@ -1566,7 +1566,10 @@ class UIRoot extends Component {
                         )}
                       </>
                     )}
-                    <ChatToolbarButtonContainer onClick={() => this.toggleSidebar("chat")} />
+                    <ChatToolbarButtonContainer onClick={() => {
+                      console.log('Button clicked!');
+                      this.toggleSidebar("chat");
+                    }} />
                     {entered && isMobileVR && (
                       <ToolbarButton
                         className={styleUtils.hideLg}
