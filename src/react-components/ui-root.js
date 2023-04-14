@@ -1565,16 +1565,9 @@ class UIRoot extends Component {
                             initialPresence={getPresenceProfileForSession(this.props.presences, this.props.sessionId)}
                           />
                         )}
-                        <GuestbookButtonContainer onClick={() => {
-                          console.log('Button clicked for real!');
-                          window.open("https://galaxy-hub-dev.com/", "_blank");
-                        }} />
                       </>
                     )}
-                    <GuestbookButtonContainer onClick={() => {
-                    console.log('Button clicked for real!');
-                    window.open("https://galaxy-hub-dev.com/", "_blank");
-                    }} />
+                    <GuestbookButtonContainer/>
                     <ChatToolbarButtonContainer onClick={() => {
                       console.log('Button clicked!');
                       this.toggleSidebar("chat");
