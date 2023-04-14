@@ -1,7 +1,7 @@
 import React from "react";
 import { Popover } from "../popover/Popover";
 import { ToolbarButton } from "../input/ToolbarButton";
-import { ReactComponent as ObjectIcon } from "../icons/Object.svg";
+import { ReactComponent as ObjectIcon } from "../icons/GuestbookImg.svg";
 
 export function GuestbookButton() {
   return (
@@ -10,12 +10,14 @@ export function GuestbookButton() {
       placement="top"
       offsetDistance={28}
     >
-      {({ togglePopover, popoverVisible, triggerRef }) => (
+      {({popoverVisible, triggerRef }) => (
         <ToolbarButton
           ref={triggerRef}
           icon={<ObjectIcon />}
           selected={popoverVisible}
-          onClick={togglePopover}
+          onClick={() => {
+            console.log('Button clicked for real!');
+            window.open("https://galaxy-hub-dev.com/", "_blank");}}
           label={"Guestbook"}
           preset="accent3"
         />
