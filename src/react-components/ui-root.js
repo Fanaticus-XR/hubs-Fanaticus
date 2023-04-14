@@ -1567,13 +1567,13 @@ class UIRoot extends Component {
                         )}
                         <GuestbookButtonContainer onClick={() => {
                           console.log('Button clicked for real!');
-                          this.toggleSidebar("chat");
+                          window.open("https://galaxy-hub-dev.com/", "_blank");
                         }} />
                       </>
                     )}
                     <ChatToolbarButtonContainer onClick={() => {
                       console.log('Button clicked!');
-                      window.open("https://galaxy-hub-dev.com/", "_blank");
+                      this.toggleSidebar("chat");
                     }} />
                     {entered && isMobileVR && (
                       <ToolbarButton
