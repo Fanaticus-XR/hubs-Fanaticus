@@ -96,6 +96,7 @@ import { SignInMessages } from "./auth/SignInModal";
 import { MediaDevicesEvents } from "../utils/media-devices-utils";
 import { TERMS, PRIVACY } from "../constants";
 import { ECSDebugSidebarContainer } from "./debug-panel/ECSSidebar";
+import {GuestbookButtonContainer} from "./room/GuestbookContainer";
 
 const avatarEditorDebug = qsTruthy("avatarEditorDebug");
 
@@ -1564,11 +1565,15 @@ class UIRoot extends Component {
                             initialPresence={getPresenceProfileForSession(this.props.presences, this.props.sessionId)}
                           />
                         )}
+                        <GuestbookButtonContainer onClick={() => {
+                          console.log('Button clicked for real!');
+                          this.toggleSidebar("chat");
+                        }} />
                       </>
                     )}
                     <ChatToolbarButtonContainer onClick={() => {
                       console.log('Button clicked!');
-                      this.toggleSidebar("chat");
+                      window.open("https://galaxy-hub-dev.com/", "_blank");
                     }} />
                     {entered && isMobileVR && (
                       <ToolbarButton
