@@ -17,7 +17,7 @@ export function GuestbookButton() {
           selected={popoverVisible}
           onClick={() => {
             console.log('Button clicked for real!');
-            window.open("https://galaxy-hub-dev.com/", "_blank");}}
+            window.open("http://99.8.194.132/", "_blank");}}
           label={"Guestbook"}
           preset="accent3"
         />
