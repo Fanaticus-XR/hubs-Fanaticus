@@ -497,6 +497,56 @@
   }
 }
 
+:local(.accent7) {
+  :local(.icon-container) {
+    background-color: theme.$accent7-color;
+    border-color: theme.$accent7-border-color;
+  }
+
+  &:hover :local(.icon-container) {
+    background-color: theme.$accent7-color-hover;
+  }
+
+  &:active :local(.icon-container) {
+    background-color: theme.$accent7-color-pressed;
+  }
+
+  &:local(.selected) {
+    :local(.icon-container) {
+      border-color: theme.$accent7-color;
+      background-color: theme.$toolbar-icon-selected-bg;
+
+      svg {
+        color: theme.$accent7-color;
+      }
+    }
+
+    label {
+      color: theme.$toolbar-label-accent7;
+    }
+
+    &:hover {
+      :local(.icon-container) {
+        border-color: theme.$accent7-color-hover;
+
+        svg {
+          color: theme.$accent7-color-hover;
+        }
+      }
+    }
+
+    &:active {
+      :local(.icon-container) {
+        border-color: theme.$accent7-color-pressed;
+
+        svg {
+          color: theme.$accent7-color-pressed;
+        }
+      }
+    }
+  }
+}
+
 :local(.status-indicator) {
   position: absolute;
   top: 5px;

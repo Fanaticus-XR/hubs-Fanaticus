@@ -54,6 +54,11 @@
   --accent3-color-hover: #{theme.$green-hover};
   --accent3-color-pressed: #{theme.$green-pressed};
 
+  --accent7-color: #{theme.$mint};
+  --accent7-border-color: var(--accent7-color);
+  --accent7-color-hover: #{theme.$mint-hover};
+  --accent7-color-pressed: #{theme.$mint-pressed};
+
   --accent4-color: #{theme.$blue};
   --accent4-border-color: var(--accent4-color);
   --accent4-color-hover: #{theme.$blue-hover};
@@ -174,6 +179,7 @@
   --toolbar-label-accent3: var(--accent3-color);
   --toolbar-label-accent4: var(--accent4-color);
   --toolbar-label-accent5: var(--accent5-color);
+  --toolbar-label-accent7: var(--accent7-color);
 
   --tile-text-color: var(--text4-color);
   --tile-bg-color: var(--secondary-color);

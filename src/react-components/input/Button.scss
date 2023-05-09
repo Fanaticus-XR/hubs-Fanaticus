@@ -166,6 +166,25 @@
   }
 }
 
+:local(.accent7) {
+  color: theme.$text5-color;
+  background-color: theme.$mint;
+
+  svg {
+    color: theme.$mint;
+  }
+
+  &:hover {
+    color: theme.$text5-color-hover;
+    background-color: theme.$accent3-color-hover;
+  }
+
+  &:active {
+    color: theme.$text5-color-pressed;
+    background-color: theme.$accent3-color-pressed;
+  }
+}
+
 :local(.accent4) {
   color: theme.$text5-color;
   background-color: theme.$accent4-color;

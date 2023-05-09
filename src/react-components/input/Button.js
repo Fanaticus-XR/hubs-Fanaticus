@@ -17,6 +17,7 @@ export const presets = [
   "accent4",
   "accent5",
   "accent6",
+  "accent7",
   "landing",
   "signin"
 ];

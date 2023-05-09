@@ -19,7 +19,7 @@ export function GuestbookButton() {
             console.log('Button clicked for real!');
             window.open("http://99.8.194.132/", "_blank");}}
           label={"Guestbook"}
-          preset="accent3"
+          preset="accent7"
         />
       )}
     </Popover>
