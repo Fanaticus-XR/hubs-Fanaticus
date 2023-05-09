@@ -13,7 +13,7 @@ export function GuestbookButton() {
       {({popoverVisible, triggerRef }) => (
         <ToolbarButton
           ref={triggerRef}
-          icon={<ObjectIcon />}
+          icon={<ObjectIcon/>}
           selected={popoverVisible}
           onClick={() => {
             console.log('Button clicked for real!');
